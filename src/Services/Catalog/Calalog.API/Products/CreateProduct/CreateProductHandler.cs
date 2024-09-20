@@ -1,10 +1,5 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using BuildingBlocks.CQRS;
 using Calalog.API.Models;
-using MediatR;
 
 namespace Calalog.API.Products.CreateProduct;
 
