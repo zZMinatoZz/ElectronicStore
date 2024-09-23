@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 
 namespace Calalog.API.Exceptions;
 
-public class ProductNotFoundException : Exception
+public class ProductNotFoundException : NotfoundException
 {
-    public ProductNotFoundException() : base("Product not found!")
+    public ProductNotFoundException(Guid Id) : base("Product", Id)
     {
 
     }
