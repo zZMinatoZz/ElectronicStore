@@ -28,7 +28,7 @@ namespace Ordering.Domain.ValueObjects
             ZipCode = zipcode;
         }
 
-        public static Address of(string firstName, string lastName, string emailAddress, string addressLine, string country, string state, string zipcode)
+        public static Address Of(string firstName, string lastName, string emailAddress, string addressLine, string country, string state, string zipcode)
         {
             ArgumentException.ThrowIfNullOrWhiteSpace(emailAddress);
             ArgumentException.ThrowIfNullOrWhiteSpace(addressLine);
