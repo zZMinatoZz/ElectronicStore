@@ -18,7 +18,7 @@ namespace Ordering.Infrastructure.Data.Configurations
             builder.Property(o => o.Id).HasConversion(orderId => orderId.Value, dbId => OrderId.Of(dbId));
 
             builder.HasOne<Customer>().WithMany().HasForeignKey(o => o.CustomerId).IsRequired();
-            builder.HasMany<OrderItem>().WithOne().HasForeignKey(oi => oi.OrderId);
+            builder.HasMany(o => o.OrderItems).WithOne().HasForeignKey(oi => oi.OrderId);
 
             // TODO: Mapping from DDD Value Objects to EF entities
             builder.ComplexProperty(o => o.OrderName, nameBuilder =>
