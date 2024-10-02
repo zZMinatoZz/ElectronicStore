@@ -1,4 +1,4 @@
-namespace Ordering.Infrastructure.Extensions;
+namespace Ordering.Infrastructure.Data.Extensions;
 internal class InitialData
 {
         public static IEnumerable<Customer> Customers =>
