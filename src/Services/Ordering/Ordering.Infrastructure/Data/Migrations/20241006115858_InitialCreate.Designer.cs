@@ -13,7 +13,7 @@ using Ordering.Infrastructure.Data;
 namespace Ordering.Infrastructure.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20241001104317_InitialCreate")]
+    [Migration("20241006115858_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -99,6 +99,11 @@ namespace Ordering.Infrastructure.Data.Migrations
                                 .HasMaxLength(180)
                                 .HasColumnType("nvarchar(180)");
 
+                            b1.Property<string>("Country")
+                                .IsRequired()
+                                .HasMaxLength(50)
+                                .HasColumnType("nvarchar(50)");
+
                             b1.Property<string>("EmailAddress")
                                 .HasMaxLength(50)
                                 .HasColumnType("nvarchar(50)");
@@ -170,6 +175,11 @@ namespace Ordering.Infrastructure.Data.Migrations
                                 .IsRequired()
                                 .HasMaxLength(180)
                                 .HasColumnType("nvarchar(180)");
+
+                            b1.Property<string>("Country")
+                                .IsRequired()
+                                .HasMaxLength(50)
+                                .HasColumnType("nvarchar(50)");
 
                             b1.Property<string>("EmailAddress")
                                 .HasMaxLength(50)
