@@ -25,7 +25,7 @@ public class CreateOrderHandler(IApplicationDbContext dbContext) : ICommandHandl
 
         var newOrder = Order.Create(
             id: OrderId.Of(Guid.NewGuid()),
-            customerId: CustomerId.Of(Guid.NewGuid()),
+            customerId: CustomerId.Of(orderDto.CustomerId),
             orderName: OrderName.Of(orderDto.OrderName),
             shippingAddress: shippingAddress,
             billingAddress: billingAddress,

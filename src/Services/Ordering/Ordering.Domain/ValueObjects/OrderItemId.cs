@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Ordering.Domain.ValueObjects
 {
-    public class OrderItemId
+    public record OrderItemId
     {
         public Guid Value { get; }
         private OrderItemId(Guid value) => Value = value;
